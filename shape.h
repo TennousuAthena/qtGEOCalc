@@ -72,7 +72,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 2 && parameters[0] > 0 && parameters[1] > 0;
+        return parameters.size() >= 2 && parameters[0] > 0 && parameters[1] > 0;
     }
 };
 
@@ -113,7 +113,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 2 && parameters[0] > 0 && parameters[1] > 0;
+        return parameters.size() >= 2 && parameters[0] > 0 && parameters[1] > 0;
     }
 };
 
@@ -137,7 +137,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        if (parameters.size() != 3) return false;
+        if (parameters.size() <= 3) return false;
         double a = parameters[0], b = parameters[1], c = parameters[2];
         return a > 0 && b > 0 && c > 0 && (a + b > c) && (a + c > b) && (b + c > a);
     }
@@ -207,7 +207,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 3 && parameters[0] > 0 && parameters[1] > 0 && parameters[2] > 0;
+        return parameters.size() >= 3 && parameters[0] > 0 && parameters[1] > 0 && parameters[2] > 0;
     }
 };
 
@@ -223,7 +223,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 2 && parameters[0] > 0 && parameters[1] > 0;
+        return parameters.size() >= 2 && parameters[0] > 0 && parameters[1] > 0;
     }
 };
 
@@ -239,7 +239,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 2 && parameters[0] > 0 && parameters[1] > 0;
+        return parameters.size() >= 2 && parameters[0] > 0 && parameters[1] > 0;
     }
 };
 
