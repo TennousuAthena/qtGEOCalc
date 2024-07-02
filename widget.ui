@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Shape Calculator</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QComboBox" name="shapeComboBox">
+     <property name="placeholderText">
+      <string>Select the shape here</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label1">
+       <property name="text">
+        <string>Parameter 1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="parameterInput1"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label2">
+       <property name="text">
+        <string>Parameter 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="parameterInput2"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label3">
+       <property name="text">
+        <string>Parameter 3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="parameterInput3"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label4">
+       <property name="text">
+        <string>Parameter 4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="parameterInput4"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label5">
+       <property name="text">
+        <string>Parameter 5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="parameterInput5"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="calculateAreaPerimeterButton">
+     <property name="text">
+      <string>Calculate Area/Perimeter</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="calculateVolumeButton">
+     <property name="text">
+      <string>Calculate Volume</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="resultTextEdit"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
