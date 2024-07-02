@@ -11,33 +11,25 @@ class Shape
 public:
     virtual ~Shape() {}
 
-    // 添加维度属性
     virtual int dimension() const = 0;
 
     virtual QString nameEN() const = 0;
     virtual std::vector<QString> parameterNames() const = 0;
 
-    // 面积计算方法
+
     virtual double area(const std::vector<double>& parameters) const { return 0.0; }
-
-    // 周长计算方法
     virtual double perimeter(const std::vector<double>& parameters) const { return 0.0; }
-
-    // 体积计算方法
     virtual double volume(const std::vector<double>& parameters) const { return 0.0; }
 
-    // 数据合法性检测方法
     virtual bool isValid(const std::vector<double>& parameters) const = 0;
 };
 
-// 二维图形类
 class TwoDimensionalShape : public Shape
 {
 public:
     int dimension() const override { return 2; }
 };
 
-// 三维形体类
 class ThreeDimensionalShape : public Shape
 {
 public:
@@ -60,7 +52,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 1 && parameters[0] > 0;
+        return parameters.size() >= 1 && parameters[0] > 0;
     }
 };
 
@@ -100,7 +92,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 1 && parameters[0] > 0;
+        return parameters.size() >= 1 && parameters[0] > 0;
     }
 };
 
@@ -183,7 +175,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 1 && parameters[0] > 0;
+        return parameters.size() >= 1 && parameters[0] > 0;
     }
 };
 
@@ -199,7 +191,7 @@ public:
     }
 
     bool isValid(const std::vector<double>& parameters) const override {
-        return parameters.size() == 1 && parameters[0] > 0;
+        return parameters.size() >= 1 && parameters[0] > 0;
     }
 };
 
